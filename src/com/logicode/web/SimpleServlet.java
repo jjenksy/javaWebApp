@@ -1,4 +1,4 @@
-package com.logicode;
+package com.logicode.web;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 /**
  * Created by jjenkins on 10/12/2016.
@@ -24,7 +25,12 @@ public class SimpleServlet extends HttpServlet {
      * @throws IOException
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        PrintWriter out = response.getWriter();
+        java.util.Date today = new java.util.Date();
+        out.println("<html>"+
+                    "<body>"+
+                    "<h1 align=center>Servlet</h1>"
+                    +"<br>"+today+"</body>"+"<html>");
         System.out.println("Test the server!!");
     }
 }
