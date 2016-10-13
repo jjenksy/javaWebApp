@@ -3,8 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-<p>Test!!!</p>
+<div class="container-fluid">
+<h1 align="center">Servlet test page</h1>
+<!--SimpleServlet.do is the logical name what we want the client to use -->
+    <div class="container">
+        <form method="POST" action="SimpleServlet.do">
+            <div>Select the characteristics</div>
+            <div class="form-group">
+                <label for="exampleSelect1">Example select</label>
+                <!--the name is what http uses to reference the selection-->
+                <select class="form-control"  name="color" id="exampleSelect1">
+                    <option>light</option>
+                    <option>amber</option>
+                    <option>brown</option>
+                    <option>dark</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleSelect2">Example select</label>
+                <!--the name is what http uses to reference the selection-->
+                <select class="form-control"  name="body" id="exampleSelect2">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>heavy</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-group">
+                <label for="exampleTextarea">Example textarea</label>
+                <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+                <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+            </div>
+            <fieldset class="form-group">
+                <legend>Radio buttons</legend>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                        Option one is this and that&mdash;be sure to include why it's great
+                    </label>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+                        Option two can be something else and selecting it will deselect option one
+                    </label>
+                </div>
+                <div class="form-check disabled">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+                        Option three
+                    </label>
+                </div>
+            </fieldset>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    Check me out
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </body>
 </html>
